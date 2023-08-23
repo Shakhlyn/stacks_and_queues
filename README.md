@@ -1,35 +1,52 @@
-# Stack Implementation in Python
+# Queue and Stack Implementations in Python
 
-This repository contains a Python implementation of a stack data structure.
+This repository contains Python implementations of a **Queue** and a **Stack** data structure.
 
-## Description
+## Queue
 
-The code in this repository demonstrates a simple stack implementation using Python classes. The stack supports push and pop operations, and you can visualize the current state of the stack.
+The `Queues` class provides a simple implementation of a queue data structure using a linked list. It supports the following methods:
 
+- `enqueue(value)`: Add an element to the end of the queue.
+- `dequeue()`: Remove and return the element from the front of the queue.
+- `print_nodes()`: Print the elements of the queue.
 
 ### Usage
 
-You can use the provided classes to create and manipulate a stack. Here's an example of how to use the stack:
+```python
+new_queue = Queues()
+
+new_queue.enqueue('first')
+new_queue.enqueue('second')
+new_queue.enqueue('third')
+new_queue.enqueue('fourth')
+
+new_queue.print_nodes()
+
+new_queue.dequeue()
+new_queue.dequeue()
+new_queue.print_nodes()
+```
+
+## Stack
+
+The `Stacks` class provides a basic implementation of a stack data structure using a linked list. It supports the following methods:
+
+- `push(value)`: Add an element to the top of the stack.
+- `pop_from_beginning()`: Remove and return the element from the top of the stack.
+- `print_nodes()`: Print the elements of the stack.
+
+### Usage
 
 ```python
-
-# Import the Stacks class
-from stack import Stacks
-
-# Create a stack instance
 stacked_data = Stacks()
 
-# Push elements onto the stack
 stacked_data.push('first')
 stacked_data.push('second')
 stacked_data.push('latest')
 
-# Print the current state of the stack
 stacked_data.print_nodes()
 
-# Pop an element from the beginning of the stack
-popped_element = stacked_data.pop_from_beginning()
-print("Popped Element:", popped_element.value)
-
-# Print the updated stack
+stacked_data.pop_from_beginning()
+stacked_data.pop_from_beginning()
 stacked_data.print_nodes()
+```
